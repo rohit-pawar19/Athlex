@@ -3,6 +3,7 @@
     padding:0;
     box-sizing:border-box;
 }
+
 /*header*/
 .banner{
     height:100vh;
@@ -18,7 +19,8 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
+    padding: 0px 60px;
+    height: 120px;
     
 
 }
@@ -26,7 +28,7 @@ nav ul{
     display: flex;
     gap: 30px;
     list-style: none;
-    padding-bottom: 70px;
+    
 }
 nav a{
     color: white;
@@ -36,14 +38,18 @@ nav a{
 }
 nav a:hover{
     color:#ff2e63;
+    text-decoration: underline;
 }
 .logo
 {
     width: 200px;
+    height: 100px;
+    cursor: pointer;
 }
 .logo img{
     width: 100%;
-    padding: 10px 10px;
+    height: 100px;
+    padding: 5px 5px;
 }
 .banner-content{
     position: absolute;
@@ -70,23 +76,40 @@ nav a:hover{
     cursor: po;
 }
 .banner-content button:hover{
-    background-color: brown;
-}
-/* Featured products*/
-.featured-products{
-    background: #0b0b0b;
-    padding: 50px 50px;
+    background-color:#ff1744;
 }
 .title-section{
     text-align: center;
     margin: 20px 20px;
-    color:grey;
     margin-bottom: 50px;
+    
    
 
 }
 .title-section span{
     color:#ff2e63;
+}
+.title-section h1{
+    color: white;
+    position: relative;
+
+    
+}
+.title-section h1::before{
+    content: "";
+    position: absolute;
+    left: 1;
+    bottom: -8px;
+    width: 100px;
+    height: 3px;
+    background: #ff2e63;
+    border-radius: 10px;
+}
+
+/* Featured products*/
+.featured-products{
+    background: #0b0b0b;
+    padding: 50px 50px;
 }
 .featured-card{
     display: grid;
@@ -102,17 +125,18 @@ nav a:hover{
     transition:1s ease;
 
 }
-.card:hover{
-    transform:translateY(-8px);
-    border-color:#ff2e63;
-
-}
 .card img{
 
     width:100%;
     height:250px;
     object-fit:cover;
     border-radius:10px;
+
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#ff2e63;
 
 }
 .card h3{
@@ -140,7 +164,6 @@ nav a:hover{
     font-size:16px;
     cursor:pointer;
     transition:.3s;
-
 }
 
 .card button:hover{
@@ -151,6 +174,8 @@ nav a:hover{
 .card span{
     color: white;
 }
+
+/*offer*/
 .offer{
     background: #0b0b0b;
     padding: 50px 50px;
@@ -160,12 +185,12 @@ nav a:hover{
     grid-template-columns: repeat(2,1fr);
     gap: 50px;
     margin-top: 20px;
-    padding: 50px 50px;
     background:linear-gradient(180deg, #1b1b1b);
     border:1px solid white;
     border-radius:18px;
     padding:18px;
     transition:1s ease;
+    height: 350px;
 
 
 }
@@ -188,7 +213,7 @@ nav a:hover{
 }
 .offer-content h1{
     margin-bottom: 20px;
-    
+   
 }
 
 .offer-content h2{
@@ -220,6 +245,97 @@ nav a:hover{
     background:#ff1744;
 
 }
+
+/*Product Page*/
+.product{
+    background: #0b0b0b;
+    padding: 50px 50px;
+}
+.product-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 30px;
+    margin: 60px 50px;
+    
+}
+.product-card{
+    background:linear-gradient(180deg, #1b1b1b);
+    border:1px solid white;
+    border-radius:18px;
+    padding:18px;
+    transition:1s ease;
+    margin-bottom: 40px
+}
+/*product-icons*/
+.product-icon{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow: auto;
+    justify-content: center;
+}
+.icon-box{
+    width: 100px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.icon-box img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #eee;
+    padding:5px;
+    transition: 1s;
+
+}
+.icon-box p{
+    margin-top: 8px;
+    font-size: 14px;
+    color: white;
+}
+.icon-box img:hover{
+    border: 2px solid #ff2e63;
+    transform: translateY(-8px);
+}
+
+.icon-box p:hover{
+    color:#ff2e63;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*footer*/
 
 footer{
@@ -260,6 +376,23 @@ footer{
 }
 
 /* Headings */
+.footer-col h2{
+    color: white;
+
+    margin-bottom: 25px;
+    position: relative;
+}
+.footer-col h2::before{
+    content: "";
+    position: absolute;
+    left: 1;
+    bottom: -8px;
+    width: 50px;
+    height: 3px;
+    background: #ff2e63;
+    border-radius: 10px;
+
+}
 
 .footer-col h3{
     color: white;
@@ -335,7 +468,6 @@ footer{
     transform: translateY(-6px);
     box-shadow: 0 0 20px rgba(255,46,99,.45);
 }
-
 /* Divider */
 
 footer hr{
