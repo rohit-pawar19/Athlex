@@ -14,8 +14,11 @@
             <div class="logo">
                 <img src="images/logo1.png" alt="">
             </div>
+            <div class="menu-btn" onclick="toggleMenu()">
+                <i id="menuIcon" class="fa-solid fa-bars"></i>
+            </div>
 
-            <ul>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="product.html">Product</a></li>
                 <li><a href="about.html">About</a></li>
@@ -49,6 +52,13 @@
                 <button>Add to Cart</button>
             </div>
             <div class="card">
+                <img src="images/feature3.png" alt="">
+                <h3>Kookaburra Ghost Grade 1 English Willow Season Cricket Bat</h3>
+                <p>Crafted from premium Grade 1 English Willow, delivering outstanding balance, powerful stroke play, and superior performance for competitive cricket.</p>
+                <span>&#8377;999</span>
+                <button>Add to Cart</button>
+            </div>
+            <div class="card">
                 <img src="images/feature4.png" alt="">
                 <h3>Wilson Evolution Indoor Game Basketball</h3>
                 <p>Premium composite leather basketball designed for exceptional grip, soft feel, and consistent bounce, making it ideal for indoor games and training session</p>
@@ -77,89 +87,90 @@
     </section>
     <!---Footer-->
     <footer>
-    <div class="footer-container">
+        <div class="footer-container">
 
-        <!-- Logo & Description -->
-        <div class="footer-col">
+            <!-- Logo & Description -->
+            <div class="footer-col">
 
-            <h2 class="footer-logo">
-                Athl<span>ex</span>  
-            </h2>
+                <h2 class="footer-logo">
+                    Athl<span>ex</span>  
+                </h2>
 
-            <p>
-                Athlex is your destination for premium sports gear,
-                footwear, and accessories designed for champions.
-                Train harder. Perform better.
-            </p>
+                <p>
+                    Athlex is your destination for premium sports gear,
+                    footwear, and accessories designed for champions.
+                    Train harder. Perform better.
+                </p>
 
-            <div class="social-icons">
+                <div class="social-icons">
 
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="footer-col">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <!-- Customer Support -->
+
+            <div class="footer-col">
+
+                <h3>Customer Support</h3>
+
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="footer-col">
+
+                <h3>Contact Us</h3>
+
+                <p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra</p>
+                <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+                <p><i class="fa-solid fa-envelope"></i> support@athlex.com</p>
+                <p><i class="fa-solid fa-clock"></i> Mon - Sat : 9 AM - 8 PM</p>
 
             </div>
 
         </div>
 
-        <!-- Quick Links -->
+        <hr>
 
-        <div class="footer-col">
+        <div class="footer-bottom">
 
-            <h3>Quick Links</h3>
-
-            <ul>
-
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Contact</a></li>
-
-            </ul>
+            <p>
+                © 2026 <span>Athlex</span>. All Rights Reserved.
+            </p>
 
         </div>
 
-        <!-- Customer Support -->
-
-        <div class="footer-col">
-
-            <h3>Customer Support</h3>
-
-            <ul>
-                <li><a href="#">Shipping Policy</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-
-        </div>
-
-        <!-- Contact -->
-
-        <div class="footer-col">
-
-            <h3>Contact Us</h3>
-
-            <p><i class="fa-solid fa-location-dot"></i> Pune, Maharashtra</p>
-            <p><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
-            <p><i class="fa-solid fa-envelope"></i> support@athlex.com</p>
-            <p><i class="fa-solid fa-clock"></i> Mon - Sat : 9 AM - 8 PM</p>
-
-        </div>
-
-    </div>
-
-    <hr>
-
-    <div class="footer-bottom">
-
-        <p>
-            © 2026 <span>Athlex</span>. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
-
+    </footer>
+        
+    <script src="js/script.js"></script>
 </body>
 </html>
