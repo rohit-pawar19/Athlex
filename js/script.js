@@ -1,17 +1,4 @@
-function login(){
-    let email=document.getElementById("email").value;
-    let password=document.getElementById("password").value;
-    let error=document.getElementById("error");
-    if(email==="rohit@gmail.com" && password==="rohit@123"){
-        localStorage.setItem("isLoggedin","true");
-        localStorage.setItem("user",email);
 
-        alert("logged in");
-        window.location.href="index.html";
-    }else{
-        error.innerText="Invalid username or Password";
-    }
-}
 
 function togglePassword(){
     let eye=document.getElementById("eye");
