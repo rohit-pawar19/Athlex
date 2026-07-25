@@ -1219,12 +1219,7 @@ footer hr{
 
     .featured-card,
 
-    .product-card,
-
-    .review-container,
-
-    .story-container,
-
+    .product-container,
     .footer-container{
 
     display:grid;
@@ -1268,32 +1263,38 @@ footer hr{
     .social-icons{
         justify-content: center;
     }
+    .about{
+        padding: 80px 20px;
+    }
     .about-container{
-
-    width:90%;
-
-    }
-
-    .about-intro p{
-
-    font-size:16px;
+        padding: 10px 10px;
 
     }
-
+    .about-intro{
+    padding: 10px 10px;
+    }
     .story-container{
+        grid-template-columns: repeat(1,1fr);
+        padding: 10px 20px;
+    }
+    .story-img{
+        width: 300px;
+        height: 300px;
 
-    display:flex;
-
-    flex-direction:column;
 
     }
+    .story-img img{
+        width: 300px;
+        height: 300px;
 
-    .story-image img{
-
-    width:100%;
-
-    height:auto;
-
+    }
+    .story-content{
+        text-align: justify;
+    }
+        
+    .brand-card{
+        height: 100px;
+        padding: 10px 10px;
     }
 
     .login-container{
@@ -1302,6 +1303,9 @@ footer hr{
 
     padding:25px;
 
+    }
+    #eye{
+        left: 300px;
     }
 
     .cart table{
@@ -1325,5 +1329,111 @@ footer hr{
     padding:40px 20px;
 
     }
+    
+    .footer-col h3::after{
+       left: 185px;
+    }
+
+    /*product-icons*/
+    .product-category{
+        width: 400px;
+    
+        padding: 5px;
+        
+       
+    }
+    .product-icon{
+        display: flex;
+        gap: 20px;
+        padding: 0px;
+    }
+    .icon-box{
+        width: 30px;
+        text-align: center;
+        cursor: pointer;
+
+    }
+    .icon-box img{
+        width: 40px;
+        height: 40px;
+        padding:px;
+
+    }
+    .icon-box p{
+        margin-top: 0px;
+        font-size: 10px;
+    }
 
 }
+@media(max-width:400px){
+    .menu-btn{
+
+        font-size:22px;
+    }
+    
+    
+    #nav-links{
+        display:none;
+        left:290px;
+    }
+     #nav-links.show{
+       display: flex;
+    }
+    #nav-links li {
+        border-bottom: 1px solid white;
+        padding: 0px;
+    }
+    .offer{
+    background: #0b0b0b;
+    padding: 10px 10px;
+    }
+    .offer-container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        
+
+
+    }
+    .offer-content{
+        padding-top: 20px;
+    }
+    .footer-col h3::after{
+        left: 100px;
+    }
+    .about{
+        padding: 5px 0px;
+    }
+    .about-container{
+        padding: 100px 0px;
+    }
+    
+    .story-container{
+        padding: 10px 10px;
+    }
+    .story-img img{
+        padding-left: 20px;
+    }
+    .cart table{
+
+    font-size:10px;
+
+
+    }
+    .cart{
+        padding:50px 0px ;
+    }
+    .cart-container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .login{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #eye{
+        left: 280px;
+    }
+   
+}
+
