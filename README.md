@@ -4,7 +4,7 @@ Athlex is a responsive sports e-commerce website developed using HTML, CSS, and 
 
 ## 🚀 Live Demo
 
-🔗https://athlexx.netlify.app/cart
+🔗https://athlexx.netlify.app/
 
 ## 📌 Features
 
