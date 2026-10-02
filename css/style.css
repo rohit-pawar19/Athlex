@@ -11,7 +11,7 @@
     min-height:480px;
     aspect-ratio:1915 / 821;
     background-color:#090909;
-    background-image:url("../images/banner.png");
+    background-image:url("../images/optimized/banner.jpg");
     background-size:contain;
     background-repeat:no-repeat;
     background-position:center;
@@ -1265,7 +1265,7 @@ footer hr{
 
     }
     .banner{
-        background-image: url(../images/banner1.png);
+        background-image: url(../images/optimized/banner1.jpg);
         --banner-image-height:92.04vw;
     }
     .banner-content{
@@ -1515,7 +1515,6 @@ footer hr{
 }
 
 
-/* Keep the full artwork visible below the navigation on smaller screens. */
 @media(max-width:1024px){
     .banner{
         min-height:0;
@@ -1555,7 +1554,6 @@ footer hr{
         padding:10px 20px;
     }
 }
-/* Overlay tablet copy on the empty left side of the artwork. */
 @media(min-width:577px) and (max-width:1024px){
     .banner{
         height:calc(120px + 42.87vw);
@@ -1582,10 +1580,37 @@ footer hr{
     }
 }
 @media(max-width:768px){
+    #nav-links,
     .banner #nav-links{
         left:auto;
         right:16px;
-        top:90px;
+        top:80px;
         width:160px;
+        max-width:calc(100vw - 32px);
+        gap:0;
+        padding:6px;
+        background:#111;
+        border:1px solid #333;
+        border-radius:10px;
+        box-shadow:0 8px 24px rgba(0,0,0,0.35);
+        z-index:10;
+    }
+    #nav-links li{
+        padding:0;
+        border-bottom:0;
+    }
+    #nav-links a{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-height:44px;
+        padding:8px 12px;
+        font-size:16px;
+        line-height:1.25;
+        border-radius:6px;
+    }
+    #nav-links a:hover{
+        background:#252525;
+        text-decoration:none;
     }
 }

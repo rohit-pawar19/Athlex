@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Athlex</title>
+    <link rel="preload" as="image" href="images/optimized/banner.jpg" media="(min-width: 577px)" fetchpriority="high">
+    <link rel="preload" as="image" href="images/optimized/banner1.jpg" media="(max-width: 576px)" fetchpriority="high">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/favicon.ico">
@@ -16,7 +18,7 @@
     <header class="banner">
         <nav>
             <div class="logo">
-                <img src="images/logo1.png" alt="">
+                <img decoding="async" src="images/optimized/logo1.png" alt="">
             </div>
             <div class="menu-btn" onclick="toggleMenu()">
                 <i id="menuIcon" class="fa-solid fa-bars"></i>
@@ -42,28 +44,28 @@
         </div>
         <div class="featured-card">
             <div class="card">
-                <img src="images/feature1.png" alt="">
+                <img loading="lazy" decoding="async" src="images/optimized/feature1.jpg" alt="">
                 <h3>Premimum Velocity X Pro Running Shoes(Red & Black)</h3>
                 <p>Velocity X Pro Running Shoes, engineered for speed, comfort, and durability</p>
                 <span>&#8377;899</span>
                 <button>Add to Cart</button>
             </div>
             <div class="card">
-                <img src="images/feature2.png" alt="">
+                <img loading="lazy" decoding="async" src="images/optimized/feature2.jpg" alt="">
                 <h3>Adidas UEFA Champions League Pro Football</h3>
                 <p>Designed with a premium textured TPU cover, seamless thermally bonded construction, and a high-retention butyl bladder,</p>
                 <span>&#8377;2,499</span>
                 <button>Add to Cart</button>
             </div>
             <div class="card">
-                <img src="images/feature3.png" alt="">
+                <img loading="lazy" decoding="async" src="images/optimized/feature3.jpg" alt="">
                 <h3>Kookaburra Ghost Grade 1 English Willow Season Cricket Bat</h3>
                 <p>Crafted from premium Grade 1 English Willow, delivering outstanding balance, powerful stroke play, and superior performance for competitive cricket.</p>
                 <span>&#8377;999</span>
                 <button>Add to Cart</button>
             </div>
             <div class="card">
-                <img src="images/feature4.png" alt="">
+                <img loading="lazy" decoding="async" src="images/optimized/feature4.jpg" alt="">
                 <h3>Wilson Evolution Indoor Game Basketball</h3>
                 <p>Premium composite leather basketball designed for exceptional grip, soft feel, and consistent bounce, making it ideal for indoor games and training session</p>
                 <span>&#8377;2999</span>
@@ -77,7 +79,7 @@
         </div>
         <div class="offer-container">
             <div class="offer-img">
-                <img src="images/offer.png" alt="">
+                <img loading="lazy" decoding="async" src="images/optimized/offer.jpg" alt="">
             </div>
             <div class="offer-content">
                 <h1>Deal Of the Day</h1>
