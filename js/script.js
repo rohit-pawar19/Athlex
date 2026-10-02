@@ -1,7 +1,7 @@
 function changeQuantity(button, amount){
     const input = button.parentElement.querySelector('.qty');
     const quantity = parseInt(input.value, 10) || 1;
-    
+    input.value = Math.max(1, quantity + amount);
 }
 
 function login(){
