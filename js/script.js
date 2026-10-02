@@ -1,4 +1,25 @@
+function changeQuantity(button, amount){
+    const input = button.parentElement.querySelector('.qty');
+    const quantity = parseInt(input.value, 10) || 1;
+    input.value = Math.max(1, quantity + amount);
+}
 
+function login(){
+    let email=document.getElementById("email").value;
+    let password=document.getElementById("password").value;
+    let error=document.getElementById("error");
+    if(email==="rohit@gmail.com" && password==="rohit@17"){
+        //save login state in localstorage
+        localStorage.setItem("isLoggedin","true");
+        localStorage.setItem("user",email);
+
+        alert("You have logged in");
+        window.location.href="index.html";
+    }else{
+        error.innerText="Inavalid email or password";
+
+    }
+}
 
 function togglePassword(){
     let eye=document.getElementById("eye");

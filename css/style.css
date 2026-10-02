@@ -6,12 +6,15 @@
 
 /*header*/
 .banner{
-    height:100vh;
-
+    position:relative;
+    width:100%;
+    min-height:480px;
+    aspect-ratio:1915 / 821;
+    background-color:#090909;
     background-image:url("../images/banner.png");
-    background-size:cover;
+    background-size:contain;
     background-repeat:no-repeat;
-    background-position: right center;
+    background-position:center;
     color: white;
    
 }
@@ -53,17 +56,18 @@ nav a:hover{
 }
 .banner-content{
     position: absolute;
-    left:100px;
+    left:clamp(24px, 6vw, 100px);
     top:50%;
     transform:translateY(-50%);
     color:white;
-    margin-left: 100px;
+    width:42%;
+    margin-left:0;
 }
 .banner-content h1{
-    font-size: 3.5rem;
+    font-size:clamp(2rem, 3.5vw, 3.5rem);
 }
 .banner-content p{
-    font-size: 23px;
+    font-size:clamp(16px, 1.5vw, 23px);
     margin-top: 10px;
 }
 .banner-content button{
@@ -269,7 +273,8 @@ nav a:hover{
 }
 /*product-icons*/
 .product-category{
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     padding: 20px 10px;
     margin: auto;
 
@@ -279,10 +284,15 @@ nav a:hover{
     gap: 20px;
     padding: 20px;
     overflow: auto;
-    justify-content: center;
+    justify-content: flex-start;
+    scrollbar-width: none;
+}
+.product-icon::-webkit-scrollbar{
+    display: none;
 }
 .icon-box{
     width: 100px;
+    flex-shrink: 0;
     text-align: center;
     cursor: pointer;
 
@@ -541,6 +551,56 @@ td img{
     text-align:center;
     background-color: #2b2b2b;
     color: white;
+}
+
+.cart-remove{
+    display:block;
+    margin:10px auto 0;
+    padding:6px 12px;
+    border:1px solid #ff2e63;
+    border-radius:6px;
+    background:transparent;
+    color:#ff2e63;
+    cursor:pointer;
+}
+.cart-remove:hover{
+    background:#ff2e63;
+    color:white;
+}
+.cart-remove:focus-visible{
+    outline:2px solid white;
+    outline-offset:2px;
+}
+
+.quantity-control{
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+}
+.quantity-control button{
+    width:32px;
+    height:36px;
+    border:1px solid #ff2e63;
+    border-radius:6px;
+    background:#ff2e63;
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+.quantity-control button:disabled{
+    opacity:0.45;
+    cursor:default;
+}
+.quantity-control .qty{
+    width:48px;
+    height:36px;
+    border:1px solid #777;
+    border-radius:4px;
+}
+.quantity-control button:focus-visible,
+.quantity-control .qty:focus-visible{
+    outline:2px solid white;
+    outline-offset:2px;
 }
 
 .summary{
@@ -911,6 +971,8 @@ footer hr{
 }
 
 /*media Query*/
+
+
 @media(max-width:768px){
 
     .menu-btn{
@@ -1044,14 +1106,6 @@ footer hr{
 
 }
 @media(min-width:577px) and (max-width:992px){
-    .banner{
-        height: 61vh;
-    }
-    .banner-content{
-        top: 30%;
-        
-    
-    }
         
     .offer-img{
         width: 100%;
@@ -1106,11 +1160,27 @@ footer hr{
 
 }
 @media(min-width:993px) and (max-width:1024px){
-    
+    .banner{
+        
+    }
 
     .featured-card, .product-container{
-        grid-template-columns:repeat(3,1fr);
+        grid-template-columns:repeat(3,minmax(0,1fr));
 
+    }
+    .featured-card > *, .product-container > *{
+        min-width:0;
+        overflow-wrap:anywhere;
+    }
+    .offer-container{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        height:auto;
+        gap:30px;
+    }
+    .offer-img{
+        width:100%;
+        min-width:0;
+        margin-left:0;
     }
      .story-container{
         display: grid;
@@ -1196,10 +1266,9 @@ footer hr{
     }
     .banner{
         background-image: url(../images/banner1.png);
-        height: 60vh;
+        --banner-image-height:92.04vw;
     }
     .banner-content{
-        top: 35%;
         margin-left:0px;
     
     }
@@ -1336,7 +1405,7 @@ footer hr{
 
     /*product-icons*/
     .product-category{
-        width: 400px;
+        width: 100%;
     
         padding: 5px;
         
@@ -1348,7 +1417,7 @@ footer hr{
         padding: 0px;
     }
     .icon-box{
-        width: 30px;
+        width: 50px;
         text-align: center;
         cursor: pointer;
 
@@ -1356,7 +1425,7 @@ footer hr{
     .icon-box img{
         width: 40px;
         height: 40px;
-        padding:px;
+        padding: 5px;
 
     }
     .icon-box p{
@@ -1402,7 +1471,7 @@ footer hr{
         left: 100px;
     }
      .product-category{
-        width: 300px;
+        width: 100%;
     
         padding: 0px;
         
@@ -1445,3 +1514,78 @@ footer hr{
    
 }
 
+
+/* Keep the full artwork visible below the navigation on smaller screens. */
+@media(max-width:1024px){
+    .banner{
+        min-height:0;
+        aspect-ratio:auto;
+        background-size:100% auto;
+        background-position:center 120px;
+        padding:120px 0 0;
+    }
+    .banner nav{
+        position:absolute;
+        inset:0 0 auto;
+        height:120px;
+        padding:0 24px;
+        z-index:2;
+    }
+    .banner .logo{
+        top:10px;
+    }
+    .banner-content{
+        position:static;
+        transform:none;
+        width:auto;
+        margin:var(--banner-image-height, 42.87vw) 0 0;
+        padding:24px;
+        text-align:center;
+    }
+    .banner-content h1{
+        font-size:clamp(24px, 4vw, 36px);
+    }
+    .banner-content p{
+        width:auto;
+        font-size:clamp(16px, 2vw, 20px);
+    }
+    .banner-content button{
+        width:auto;
+        min-width:150px;
+        padding:10px 20px;
+    }
+}
+/* Overlay tablet copy on the empty left side of the artwork. */
+@media(min-width:577px) and (max-width:1024px){
+    .banner{
+        height:calc(120px + 42.87vw);
+    }
+    .banner-content{
+        position:absolute;
+        top:calc(120px + 21.435vw);
+        left:5%;
+        width:43%;
+        margin:0;
+        padding:0;
+        transform:translateY(-50%);
+        text-align:left;
+    }
+    .banner-content h1{
+        font-size:clamp(22px, 3.2vw, 32px);
+    }
+    .banner-content p{
+        font-size:clamp(14px, 1.8vw, 18px);
+        line-height:1.4;
+    }
+    .banner-content button{
+        font-size:16px;
+    }
+}
+@media(max-width:768px){
+    .banner #nav-links{
+        left:auto;
+        right:16px;
+        top:90px;
+        width:160px;
+    }
+}
